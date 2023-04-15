@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meal</title>
+    <style>
+        body {
+            font-family: 'Cambria', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            width: 400px;
+        }
+
+        .container {
+            width: 500px;
+            height: auto;
+        }
+
+        .price {
+            width: 120px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        table {
+            width: 100%;
+            display: inline-block;
+
+        }
+
+        td,
+        th {
+            vertical-align: top;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="assets/logo.webp" alt="logo">
+        <table>
+            <tr>
+                <th colspan="2">
+                    <h2>2-Pc Korean Fried Chicken Boxed Meal</h2>
+                </th>
+                <th>
+                    <h2>230.00</h2>
+                    <div style="font-weight: lighter; width: 100px;">Based price</div>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <p style="font-weight: lighter;">2pcs K-Style or Klassic Fried Chicken with Rice & Drink</p>
+    </div>
+    <div class="container">
+        <div>
+            <form action="order.html" method="get">
+                <label for="flavor">
+                    <h1>Choice of Flavor: <span style="font-size: 15px; vertical-align: middle; font-weight: normal;">
+                            Optional, max 2
+                        </span></h1>
+                </label>
+                <label for="flavor1">
+                    <input type="checkbox" name="flavor" value="Yangnyeom">
+                    Yangnyeom
+                </label>
+                <br>
+                <label for="flavor1">
+                    <input type="checkbox" name="flavor" value="Soy Garlic">
+                    Soy Garlic
+                </label>
+                <br>
+                <label for="flavor1">
+                    <input type="checkbox" name="flavor" value="Klassic Fried Chikin with Gravy">
+                    Klassic Fried Chikin with Gravy
+                </label>
+                <br>
+                <label for="flavor1">
+                    <input type="checkbox" name="flavor" value="Spicy">
+                    Spicy
+                </label>
+                <br>
+                <label for="flavor1">
+                    <input type="checkbox" name="flavor" value="Crunchy Garlic">
+                    Crunchy Garlic
+                </label>
+                <br>
+
+                <label for="drinks">
+                    <h1>Choice of Drinks: <span
+                            style="font-size: 15px; vertical-align: middle; font-weight: normal;">Pick 1</span> </h1>
+                </label>
+                <select name="drinks" id="drinks" multiple required>
+                    <option value="Premium House Blend Iced Tea Regular">Premium House Blend Iced Tea Regular</option>
+                    <option value="Premium House Blend Iced Tea Large">Premium House Blend Iced Tea Large</option>
+                    <option value="Del Monte Pineapple Juice Regular">Del Monte Pineapple Juice Regular</option>
+                    <option value="Del Monte Pineapple Juice Large">Del Monte Pineapple Juice Large</option>
+                </select>
+                <!-- <table>
+                        <tr>
+                            <td><input type="radio" id="drinks" name="drinks" value="Premium House Blend Iced Tea Regular"></td>
+                            <td><label for="drinks">Premium House Blend Iced Tea Regular</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="drinks" name="drinks" value="Premium House Blend Iced Tea Large"></td>
+                            <td><label for="drinks">Premium House Blend Iced Tea Large</label></td>
+                            <td><label for="price"> +40.00</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="drinks" name="drinks" value="Del Monte Pineapple Juice Regular"></td>
+                            <td><label for="drinks">Del Monte Pineapple Juice Regular</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="drinks" name="drinks" value="Del Monte Pineapple Juice Large"></td>
+                            <td><label for="drinks">Del Monte Pineapple Juice Large</label></td>
+                            <td>+40.00</td>
+                        </tr>
+                        <tr>
+                            
+                        </tr>
+                    </table>
+                    -->
+                <br>
+                <input type="submit" value="Order">
+            </form>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

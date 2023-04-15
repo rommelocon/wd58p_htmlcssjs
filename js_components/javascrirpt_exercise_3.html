@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Machine Problem 1</h1>
+    <div id="js_output_1"></div>
+
+    <h1>Machine Problem 2</h1>
+    <div id="js_output_2"></div>
+
+    <h1>Machine Problem 3</h1>
+    <div id="js_output_3"></div>
+    <script>
+        let staff = [
+            { name: "Oliver Queen", title: "CEO", gender: "male", age: 38, languages: ["english", "spanish"] },
+            { name: "Ben Hur", title: "Security consultant", gender: "male", age: 25, languages: ["latin", "italian"] },
+            { name: "Jessica Alba", title: "Admin Assistant", gender: "female", age: 23, languages: ["english", "spanish"] },
+            { name: "Pepper Piper", title: "Quality Assurance", gender: "female", age: 32, languages: ["english", "spanish"] },
+            { name: "Red Sullivan", title: "Project Manager", gender: "male", age: 27, languages: ["russian", "english"] },
+            { name: "Juan Dela Cruz", title: "Manager", age: 24, gender: "male", languages: ["russian", "french"] },
+            { name: "Anna Salvador", title: "Junior Dev", age: 21, gender: "female", languages: ["english", "french"] },
+            { name: "Mark Bautista", title: "Senior Fullstack Dev", age: 28, gender: "male", languages: ["russion", "spanish"] },
+            { name: "Micheal Garcia", title: "CEO", age: 40, gender: "male", languages: ["english", "latin"] }
+        ];
+
+        for (let i in staff) {
+            let staffs = staff[i];
+            document.getElementById('js_output_1').innerHTML += "<br>" + "Name: " + staffs.name + " " + "Age: " + staffs.age;
+        }
+
+        let ageGreaterThan30 = 0;
+        staff.forEach(function (staffs) {
+            if (staffs.age > 30) {
+                //document.getElementById('js_output_2').innerHTML += "<br>" + "Name: " + staffs.name + " " + "Age: " + staffs.age;
+                ageGreaterThan30++;
+            }
+        });
+        document.getElementById('js_output_2').innerHTML = ageGreaterThan30;
+
+        let staffSpanishCount = 0;
+        staff.forEach((employee) => {
+            if (employee.languages.includes('spanish')) {
+                staffSpanishCount++;
+            }
+        });
+        document.getElementById('js_output_3').innerHTML = + staffSpanishCount;
+    </script>
+</body>
+
+</html>

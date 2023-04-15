@@ -1,0 +1,40 @@
+body {
+    font-family: 'montserrat', monospace, sans-serif;
+}
+
+
+p,
+li,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 10px 0;
+}
+
+.expertise li {
+    padding: 10px 0;
+    margin-left: 16px;
+}
+
+.header {
+    width: 25%;
+    margin: 0 20px;
+    background-color: rgb(44, 39, 75);
+    padding: 20px 0px 20px 24px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-left {
+    justify-content: left;
+}

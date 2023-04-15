@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="bg-light py-5">
+        <div class="container">
+            <a href="#" class="btn text-secondary"><i class="fa-solid fa-angles-left"></i> Back to list</a>
+
+            <!-- Card Profile-->
+            <div class="card my-3">
+
+                <!-- Card Header-->
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="h3 text-primary">Client Profile (Juan Dela Cruz)</div>
+                        <button class="btn btn-dark btn-outline-dark text-white border-0 btn-sm my-2"><i
+                                class="fa-solid fa-plus"></i> Add client</button>
+                    </div>
+                </div>
+
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="grid">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-3 d-flex justify-content-center flex-column text-center">
+                                <i class="fa-regular fa-circle-user fa-9x text-dark"></i>
+                                <input type="button" value="Upload Photo" class="btn btn-dark border-0 mt-3 mx-auto">
+                            </div>
+                            <div class="col-sm-6 col-12 m-auto">
+                                <table class="table table-borderless my-4">
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-end fw-bold">ID</td>
+                                            <td class="fw-light">12345678</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-end fw-bold">Birhdate</td>
+                                            <td class="fw-light">10-27-1950</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-end fw-bold">Start Date</td>
+                                            <td class="fw-light">10-27-2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-end fw-bold">Language</td>
+                                            <td class="fw-light">English</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-sm-3 text-md-end text-center">
+                                <button class="btn"><i class="fa-solid fa-pen-to-square fa-2x text-primary"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    ...
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="card">
+                <div class="card-header pb-0 border-bottom-0 bg-primary">
+                    <ul class="nav nav-tabs flex-nowrap overflow-x-auto overflow-y-hidden border-bottom-0" id="nav-tab"
+                        role="tablist">
+                        <li class="nav-item me-2" role="presentation">
+                            <a class="nav-link active rounded-bottom-0 text-nowrap text-white"
+                                id="home-tab" data-bs-toggle="tab" data-bs-target="#home-pane" type="button" role="tab"
+                                aria-controls="home-pane" aria-selected="true">Contact
+                                Details</a>
+                        </li>
+                        <li class="nav-item me-2" role="presentation">
+                            <a class="nav-link btn rounded-bottom-0 text-nowrap text-white"
+                                id="files-attached-tab" data-bs-toggle="tab" data-bs-target="#files-attached-pane"
+                                role="tab" aria-controls="files-attached-pane" aria-selected="false">Files Attached</a>
+                        </li>
+                        <li class="nav-item me-2" role="presentation">
+                            <a class="nav-link btn rounded-bottom-0 text-nowrap text-white"
+                                id="service-delivered-tab" data-bs-toggle="tab" data-bs-target="#service-delivered-pane"
+                                role="tab" aria-controls="service-delivered-pane" aria-selected="false">Service
+                                Delivered</a>
+                        </li>
+                        <li class="nav-item me-2" role="presentation">
+                            <a class="nav-link btn rounded-bottom-0 text-nowrap text-white"
+                                id="client-progress-notes-tab" data-bs-toggle="tab"
+                                data-bs-target="#client-progress-notes-pane" role="tab"
+                                aria-controls="client-progress-notes-pane" aria-selected="false">Client Progress
+                                Notes</a>
+                        </li>
+                        <li class="nav-item me-2" role="presentation">
+                            <a class="nav-link btn rounded-bottom-0 text-nowrap text-white"
+                                id="client-funds-monitoring-tab" data-bs-toggle="tab"
+                                data-bs-target="#client-funds-monitoring-pane" role="tab"
+                                aria-controls="client-funds-monitoring-pane" aria-selected="false">Client Funds
+                                Monitoring</a>
+                        </li>
+                        <li class="nav-item me-2" role="presentation">
+                            <a class="nav-link btn rounded-bottom-0 text-nowrap text-white"
+                                id="time-tracker-tab" data-bs-toggle="tab" data-bs-target="#time-tracker-pane"
+                                role="tab" aria-controls="time-tracker-pane" aria-selected="false">Time Tracker</a>
+                        </li>
+                        <li class="nav-item me-2" role="presentation">
+                            <a class="nav-link btn rounded-bottom-0 text-nowrap text-white"
+                                id="feedback-and-complaints-tab" data-bs-toggle="tab"
+                                data-bs-target="#feedback-and-complaints-pane" role="tab"
+                                aria-controls="feedback-and-complaints-pane" aria-selected="false">Feedback and
+                                Complaints</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-body rounded-0">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home-pane" role="tabpanel"
+                            aria-labelledby="contact-details-tab" tabindex="0">
+                            <form action="" class="was-validated">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                        <label for="address1">Address 1</label>
+                                        <input type="text" name="address1" id="address1" class="form-control" required>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                        <label for="address2">Address 2 (Optional)</label>
+                                        <input type="text" name="address2" id="address2" class="form-control">
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                        <label for="state">State</label>
+                                        <input type="text" name="state" id="state" class="form-control" required>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                        <label for="city">City</label>
+                                        <input type="text" name="city" id="city" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                        <label for="postal-code">Postal Code</label>
+                                        <input type="number" name="postal-code" id="postal-code" class="form-control"
+                                            required>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                        <label for="country">Contry</label>
+                                        <select name="country" id="country" class="form-select" required>
+                                            <option value="" selected="">-- None Selected --</option>
+                                            <option value="1">Philippines</option>
+                                            <option value="2">Japan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                        <label for="mobile-phone">Mobile Phone</label>
+                                        <input type="tel" name="mobile-phone" id="mobile-phone" class="form-control"
+                                            pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="0912-345-6789" required>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                        <label for="home-phone">Home Phone</label>
+                                        <input type="tel" name="home-phone" id="home-phone" class="form-control"
+                                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="021-234-4567" required>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                        <label for="email">Email</label>
+                                        <input type="email" name="email" id="email" class="form-control"
+                                            placeholder="juandelacruz@example.com" required>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                        <label for="other-phone">Other Phone</label>
+                                        <input type="tel" name="other-phone" id="other-phone" class="form-control"
+                                            pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="0912-345-6789" required>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane fade" id="files-attached-pane" role="tabpanel"
+                            aria-labelledby="files-attached-tab" tabindex="0">
+                            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates ex atque
+                                inventore,
+                                ipsum excepturi magni quisquam quia, esse consequatur nihil in, vitae deserunt. Cumque
+                                voluptas adipisci aliquid facere ratione ex?</div>
+                        </div>
+
+                        <div class="tab-pane fade" id="service-delivered-pane" role="tabpanel"
+                            aria-labelledby="service-delivered-tab" tabindex="0">
+                            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates ex atque
+                                inventore,
+                                ipsum excepturi magni quisquam quia, esse consequatur nihil in, vitae deserunt. Cumque
+                                voluptas adipisci aliquid facere ratione ex?</div>
+                        </div>
+
+                        <div class="tab-pane fade" id="client-progress-notes-pane" role="tabpanel"
+                            aria-labelledby="client-progress-notes-tab" tabindex="0">
+                            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates ex atque
+                                inventore,
+                                ipsum excepturi magni quisquam quia, esse consequatur nihil in, vitae deserunt. Cumque
+                                voluptas adipisci aliquid facere ratione ex?</div>
+                        </div>
+
+                        <div class="tab-pane fade" id="client-funds-monitoring-pane" role="tabpanel"
+                            aria-labelledby="client-funds-monitoring-tab" tabindex="0">
+                            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates ex atque
+                                inventore,
+                                ipsum excepturi magni quisquam quia, esse consequatur nihil in, vitae deserunt. Cumque
+                                voluptas adipisci aliquid facere ratione ex?</div>
+                        </div>
+
+                        <div class="tab-pane fade" id="time-tracker-pane" role="tabpanel"
+                            aria-labelledby="time-tracker-tab" tabindex="0">
+                            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates ex atque
+                                inventore,
+                                ipsum excepturi magni quisquam quia, esse consequatur nihil in, vitae deserunt. Cumque
+                                voluptas adipisci aliquid facere ratione ex?</div>
+                        </div>
+
+                        <div class="tab-pane fade" id="feedback-and-complaints-pane" role="tabpanel"
+                            aria-labelledby="feedback-and-complaints-tab" tabindex="0">
+                            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates ex atque
+                                inventore,
+                                ipsum excepturi magni quisquam quia, esse consequatur nihil in, vitae deserunt. Cumque
+                                voluptas adipisci aliquid facere ratione ex?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

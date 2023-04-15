@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="bg-dark text-white p-3">Invoice Details</h1>
+        <table class="table table-striped">
+            <tr>
+                <td>Invoice To:</td>
+                <td><strong><span id="invoiceTo"></span></strong></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><span id="address"></span></td>
+            </tr>
+            <tr>
+                <td>Invoice Number:</td>
+                <td><span id="invoiceNumber"></span></td>
+            </tr>
+            <tr>
+                <td>Date:</td>
+                <td><span id="date"></span></td>
+            </tr>
+            <tr>
+                <td>Payment Mode:</td>
+                <td><span id="paymentMode"></span></td>
+            </tr>
+        </table>
+        <br>
+        <h1 class="bg-dark text-white p-3">Invoice Items</h1>
+        <table id="invoice-table" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Qty</th>
+                    <th>Unit Price</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total Amount:</td>
+                    <td id="total-amount"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+<script>
+    let invoice = {
+        invoiceTo: "Juan Dela Cruz",
+        date: "2023-04-15",
+        address1: "810 Oroquieta Street Sta Cruz 1000",
+        address2: "Manila, Metro Manila, Philippines",
+        invoiceNumber: "6845",
+        paymentMode: "COD"
+    };
+
+    let invoiceItems = [
+        { description: "Mouse", Qty: 3, unitPrice: 200 },
+        { description: "Keyboard", Qty: 3, unitPrice: 400 },
+        { description: "Monitor", Qty: 6, unitPrice: 5400 },
+        { description: "CPU Tower Case", Qty: 3, unitPrice: 1200 },
+        { description: "Headset", Qty: 3, unitPrice: 500 },
+        { description: "UPS", Qty: 1, unitPrice: 4000 },
+    ];
+
+    // Display invoice details
+    document.getElementById("invoiceTo").innerHTML = invoice.invoiceTo;
+    document.getElementById("address").innerHTML = `${invoice.address1}, ${invoice.address2}`;
+    document.getElementById("invoiceNumber").innerHTML = invoice.invoiceNumber.padStart(10, "0");
+    document.getElementById("date").innerHTML = formatDate(invoice.date);
+    document.getElementById("paymentMode").innerHTML = invoice.paymentMode;
+
+    // Format Date as dd/mm/yyyy
+    function formatDate(dateString) {
+        let date = new Date(dateString);
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let formattedDate = day + "/" + month + "/" + date.getFullYear();
+        return formattedDate;
+    }
+
+    // Get the table body and total amount element
+    const tableBody = document.querySelector("#invoice-table tbody");
+    const totalAmount = document.querySelector("#total-amount");
+
+    // Loop through each item and create a row in the table
+    let subtotal = 0;
+    for (let i = 0; i < invoiceItems.length; i++) {
+        const item = invoiceItems[i];
+        const amount = item.Qty * item.unitPrice;
+        subtotal += amount;
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${item.description}</td><td>${item.Qty}</td><td>${item.unitPrice}</td><td>${amount}</td>`;
+        tableBody.appendChild(row);
+    }
+
+    // Display the total amount
+    totalAmount.innerHTML = subtotal;
+
+</script>
+
+</html>

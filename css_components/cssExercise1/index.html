@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .black {
+            width: 100%;
+            height: 100px;
+            background-color: black;
+        }
+
+        .left {
+            background-color: white;
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .container-text {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .internal1,
+        .internal3 {
+            padding: 20px;
+        }
+
+        .internal2 {
+            padding-top: 50px;
+        }
+
+        .down {
+            margin-top: 20px;
+        }
+
+        .rightbox {
+            border-radius: 0 10px 10px 0;
+        }
+
+        .leftbox {
+            border-radius: 10px 0 0 10px;
+        }
+
+        .text {
+            background-color: white;
+            position: relative;
+            top: -80px;
+            font-size: 30px;
+            width: 200px;
+            color: blue;
+            padding: 15px 55px;
+            box-shadow: 1px;
+
+        }
+
+        .blue {
+            background-color: blue;
+            color: white;
+            height: 150px;
+            border-radius: 10px;
+            text-align: center;
+            padding: 15px 55px !important;
+            justify-content: center;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="black"></div>
+        <div class="container-text">
+            <div class="left">
+                <div class="text down leftbox">
+                    <div class="internal1">
+                        International Freight Forwarding</div>
+                </div>
+                <div class="text blue">
+                    <div class="internal2">
+                        Logistics</div>
+                </div>
+
+                <div class="text down rightbox">
+                    <div class="internal3">
+                        Customs Brokerage</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Machine Problem 1</h1><br />
+    <label for="input-number">Enter a number:</label>
+    <input type="number" name="number" id="input-number">
+    <button id="calculate-btn">Calculate</button>
+    <p id="output"></p>
+
+    <h1>Machine Problem 2</h1>
+    <p>Result:</p>
+    <p id="output2"></p>
+
+    <h1>Machine Problem 3</h1>
+    <p>Result:</p>
+    <p id="output3"></p>
+
+</body>
+<script>
+    function findNextDivisibleBySeven(number) {
+        let remainder = number % 7;
+        if (remainder === 0) {
+            return number;
+        } else {
+            return number + (7 - remainder);
+        }
+    }
+
+    let inputNumber = document.getElementById('input-number');
+    const calculateBtn = document.getElementById('calculate-btn');
+    let output = document.getElementById('output');
+
+    calculateBtn.addEventListener('click', () => {
+        const input = Number(inputNumber.value);
+        const result = findNextDivisibleBySeven(input);
+        document.getElementById('output').innerHTML = 'The next number in sequence that is divisible by 7 is: ' + result;
+    });
+
+    const numbers = [1, 7, 7, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9];
+
+    const countConsecutiveDuplicates = (numbers) => {
+        let count = 0;
+        for (let i = 0; i < numbers.length - 1; i++) {
+            if (numbers[i] === numbers[i + 1]) {
+                count++;
+                i++;
+            }
+        }
+        return count;
+    }
+
+    const countTripleConsecutiveDuplicates = (numbers) => {
+        let count = 0;
+        for (let i = 0; i < numbers.length - 2; i++) {
+            if (numbers[i] === numbers[i + 1] && numbers[i] === numbers[i + 2]) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    document.getElementById('output2').innerHTML = countConsecutiveDuplicates(numbers);
+    document.getElementById('output3').innerHTML = countTripleConsecutiveDuplicates(numbers);
+</script>
+
+</html>

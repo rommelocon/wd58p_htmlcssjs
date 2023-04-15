@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="bg-light py-5">
+        <div class="container">
+            <a href="#" class="btn text-secondary"><i class="fa-solid fa-angles-left"></i>Back to list</a>
+            <div class="clearfix">
+                <div class="h1 text-primary float-start">Client Profile (Juan Dela Cruz)</div>
+                <button class="btn btn-dark btn-outline-dark text-white border-0 btn-sm float-end my-2"><i
+                        class="fa-solid fa-plus"></i> Add client</button>
+            </div>
+        </div>
+        <div class="container bg-primary my-2 p-4 rounded-3 text-white">
+            <div class="grid">
+                <div class="row justify-content-center">
+                    <div class="col-sm-3 d-flex justify-content-center flex-column text-center">
+                        <i class="fa-regular fa-circle-user fa-9x "></i>
+                        <input type="button" value="Upload Photo"
+                            class="btn btn-light btn-outline-dark border-0 mt-3 w-50 mx-auto">
+                    </div>
+                    <div class="col-sm-6">
+                        <table class="table table-borderless text-light mx-auto my-3">
+                            <tbody>
+                                <tr>
+                                    <td class="text-end fw-bold">ID</td>
+                                    <td class="fw-light">12345678</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end fw-bold">Birhdate</td>
+                                    <td class="fw-light">10-27-1950</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end fw-bold">Start Date</td>
+                                    <td class="fw-light">10-27-2019</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end fw-bold">Language</td>
+                                    <td class="fw-light">English</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn float-end text-white"><i class="fa-solid fa-pen-to-square fa-2x"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container bg-light my-4 py-4 rounded">
+            <form action="" class="was-validated">
+                <a href="" class="btn rounded-top btn-light btn-outline-dark rounded-0 border-bottom-0 active">Contact
+                    Details</a>
+                <a href="" class="btn rounded-top btn-light btn-outline-dark rounded-0 border-bottom-0">Files
+                    Attached</a>
+                <a href="" class="btn rounded-top btn-light btn-outline-dark rounded-0 border-bottom-0">Service
+                    Delivered</a>
+                <a href="" class="btn rounded-top btn-light btn-outline-dark rounded-0 border-bottom-0">Client Progress
+                    Note</a>
+                <a href="" class="btn rounded-top btn-light btn-outline-dark rounded-0 border-bottom-0">Client Funds
+                    Monitoring</a>
+                <a href="" class="btn rounded-top btn-light btn-outline-dark rounded-0 border-bottom-0">Time Tracker</a>
+                <a href="" class="btn rounded-top btn-light btn-outline-dark rounded-0 border-bottom-0">Feedback and
+                    Complaints</a>
+                <div class="bg-primary p-4 text-white rounded-bottom rounded-end">
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="address1">Address 1</label>
+                            <input type="text" name="address1" id="address1" class="form-control" required>
+                        </div>
+                        <div class="col-3">
+                            <label for="address2">Address 2 (Optional)</label>
+                            <input type="text" name="address2" id="address2" class="form-control">
+                        </div>
+                        <div class="col-3">
+                            <label for="state">State</label>
+                            <input type="text" name="state" id="state" class="form-control" required>
+                        </div>
+                        <div class="col-3">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="postal-code">Postal Code</label>
+                            <input type="number" name="postal-code" id="postal-code" class="form-control" required>
+                        </div>
+                        <div class="col-3">
+                            <label for="country">Contry</label>
+                            <select name="country" id="country" class="form-select" required>
+                                <option value="" selected="">-- None Selected --</option>
+                                <option value="1">Philippines</option>
+                                <option value="2">Japan</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="mobile-phone">Mobile Phone</label>
+                            <input type="tel" name="mobile-phone" id="mobile-phone" class="form-control"
+                                pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="0912-345-6789" required>
+                        </div>
+                        <div class="col-3">
+                            <label for="home-phone">Home Phone</label>
+                            <input type="tel" name="home-phone" id="home-phone" class="form-control"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="021-234-4567" required>
+                        </div>
+                        <div class="col-3">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="juandelacruz@example.com" required>
+                        </div>
+                        <div class="col-3">
+                            <label for="other-phone">Other Phone</label>
+                            <input type="tel" name="other-phone" id="other-phone" class="form-control"
+                                pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="0912-345-6789" required>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+.nav-link.active {
+    background-color: white !important;
+    color: black !important;
+    border-top: 3px solid rgb(230, 97, 8) !important;
+}
+
+td, th{
+    padding: 0 10px !important;
+    white-space:nowrap ;
+}
