@@ -65,7 +65,7 @@
     const secondInput = document.getElementById("secondNumberInput");
     const result = document.getElementById("result");
 
-    document.getElementById("add").addEventListener("click", function(){
+    /*document.getElementById("add").addEventListener("click", function(){
         const num1 = parseFloat(firstInput.value);
         const num2 = parseFloat(secondInput.value);
         const returnValue = num1 + num2;
@@ -98,6 +98,48 @@
         const num2 = parseFloat(secondInput.value);
         const returnValue = num1 ** num2;
         result.innerHTML = returnValue;
+    });*/
+
+    const calculator = (operator) => {
+        const num1 = parseFloat(firstInput.value);
+        const num2 = parseFloat(secondInput.value);
+        let returnValue;
+
+        switch (operator) {
+            case "+":
+                returnValue = num1 + num2;
+                break;
+            case "-":
+                returnValue = num1 - num2;
+                break;
+            case "*":
+                returnValue = num1 * num2;
+                break;
+            case "/":
+                returnValue = num2 / num1;
+                break;
+            case "^":
+                returnValue = num1 ** num2;
+                break;
+        }
+
+        result.innerHTML = returnValue.toFixed(2);
+    }
+
+    document.getElementById("add").addEventListener("click", function () {
+        calculator("+");
+    });
+    document.getElementById("subtract").addEventListener("click", function () {
+        calculator("-");
+    });
+    document.getElementById("multiply").addEventListener("click", function () {
+        calculator("*");
+    });
+    document.getElementById("divide").addEventListener("click", function () {
+        calculator("/");
+    });
+    document.getElementById("exponent").addEventListener("click", function () {
+        calculator("^");
     });
 </script>
 
