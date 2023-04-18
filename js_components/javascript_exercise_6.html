@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="bg-dark text-white text-center">Machine Problem 1</h1>
+        <div id="displayResult"></div>
+
+        <h1 class="bg-dark text-white text-center">Machine Problem 2</h1>
+        <form>
+            <label class="form-label" for="num1">Number 1: </label>
+            <input class="form-control" type="number" id="num1" readonly>
+            <label class="form-label" for="num2">Number 2: </label>
+            <input class="form-control" type="number" id="num2" readonly>
+            <label class="form-label" for="num3">Number 3: </label>
+            <input class="form-control" type="number" id="num3" readonly>
+            <button class="btn btn-outline-dark" type="button" onclick="calculateScore()">Compute</button>
+        </form>
+        <div id="displayResult2"></div>
+    </div>
+</body>
+<script>
+    const output = (target, value, nextLine = '<br>') => {
+        document.getElementById(target).innerHTML += nextLine + value;
+    }
+
+    const convertNumberToWord = (num) => {
+        const numberWord = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]
+
+        let numStr = num.toString();
+        let result = '';
+
+        for (let i = 0; i < numStr.length; i++) {
+            let digit = parseInt(numStr[i]);
+
+            if (i === 0) {
+                result += numberWord[digit];
+            }
+            else if (i === 1 && digit === 1) {
+                result = numberWord[parseInt(numStr.slice(-2))];
+                break;
+            } else if (i === 1) {
+                result += numberWord[digit];
+            }
+            else if (i === 2) {
+                result += numberWord[digit];
+            }
+            if (digit !== 0 && i < numStr.length - 1) {
+                result += ' ';
+            }
+        }
+        return result;
+    }
+
+    // Generate 3 random numbers with range of 50 and 100
+    let num1 = Math.floor(Math.random() * 51) + 50;
+    let num2 = Math.floor(Math.random() * 51) + 50;
+    let num3 = Math.floor(Math.random() * 51) + 50;
+
+    // Set the values of the input fields
+    document.getElementById("num1").value = num1;
+    document.getElementById("num2").value = num2;
+    document.getElementById("num3").value = num3;
+
+    const calculateScore = (num) => {
+        // Calculate the average score of 3 random number
+        let averageScore = (num1 + num2 + num3) / 3;
+        let result = ' ';
+
+        // Display the result
+        if (averageScore < 75) {
+            result = "Failed";
+        } else {
+            result = "Passed";
+        }
+        output("displayResult2", result);
+    }
+
+
+    output("displayResult", convertNumberToWord(721));
+
+
+</script>
+
+</html>
