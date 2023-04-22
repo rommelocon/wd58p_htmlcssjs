@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="displayResult"></div>
+</body>
+
+<script>
+    const output = (target, value, nextLine = '<br>') => {
+        document.getElementById(target).innerHTML += nextLine + value;
+    }
+    let programmerQuote = `"Make it work, make it right, make it fast." – Kent Beck`;
+    let emplyees = ["John", "Brian", "Michelle", "Angela", "Nicolas", "Grace"];
+    let referenceNumer = '1904';
+    let sales = [50, 30, 15, 20, 40, 20, 60, 45];
+
+    const date = new Date();
+    output("displayResult", date);
+
+    const dnewDateate = new Date('04-19-2020');
+    output("displayResult", dnewDateate);
+
+    sales.unshift(70);
+    output("displayResult", sales);
+
+    // Count words in sentence
+    output("displayResult",  programmerQuote.split(" ").length);
+
+    output("displayResult",  sales.sort().pop());
+
+    output("displayResult",  referenceNumer.padEnd(10, '0'));
+
+</script>
+
+</html>
