@@ -1,10 +1,11 @@
 import Invoice from './Invoice';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      <Invoice></Invoice>
+      <Invoice />
     </div>
   );
 }
