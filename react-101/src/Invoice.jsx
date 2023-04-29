@@ -51,22 +51,22 @@ const Invoice = () => {
 
 	return (
 		<>
-			<div class="container">
-				<div class="card">
-					<h2 class="font-bold text-3xl uppercase bg-black text-white text-left p-5">
+			<div className="container">
+				<div className="card">
+					<h2 className="font-bold text-3xl uppercase bg-black text-white text-left p-5">
 						Invoice To: {invoice.invoiceTo}
 					</h2>
-					<p class="text-left">
+					<p className="text-left">
 						Address: {`${invoice.address1}, ${invoice.address2}`}
 					</p>
-					<p class="text-left">
+					<p className="text-left">
 						Invoice Number: {invoice.invoiceNumber.padStart(10, "0")}
 					</p>
-					<p class="text-left">Date: {formatDate(invoice.date)}</p>
-					<p class="text-left">Payment Mode: {invoice.paymentMode}</p>
+					<p className="text-left">Date: {formatDate(invoice.date)}</p>
+					<p className="text-left">Payment Mode: {invoice.paymentMode}</p>
 				</div>
-				<table id="invoice-table" class="table ">
-					<thead class="table-dark">
+				<table id="invoice-table" className="table table-auto">
+					<thead className="table-dark">
 						<tr>
 							<th>Description</th>
 							<th>Quantity</th>
